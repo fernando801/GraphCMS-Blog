@@ -1,13 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import DateFormater from './DateFormater'
-import Categories from './Categories'
 
 export default function PostCard({ post }) {
   return (
     <div className='bg-white drop-shadow-md rounded-md overflow-hidden'>
       <Link href={`/post/${post.slug}`}>
-        <div className='h-64 md:h-72 relative cursor-pointer'>
+        <div className='h-64 md:h-72 xl:h-96 relative cursor-pointer'>
           <Image
             src={post.featuredImage.url}
             alt={post.title}

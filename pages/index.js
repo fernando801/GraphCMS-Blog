@@ -32,7 +32,7 @@ export default function Home({ posts, recentPosts }) {
           </div>
           <div className='col-span-1 lg:col-span-4'>
             <div className='relative lg:sticky lg:top-8 flex flex-col gap-8'>
-              <PostWidget recentPosts={recentPosts} />
+              <PostWidget recentPosts={recentPosts} relatedPosts={[]}/>
               <Categories />
             </div>
           </div>
