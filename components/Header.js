@@ -11,7 +11,7 @@ const categories = [
 export default function Header({ props }) {
   return (
     <div className='bg-black'>
-      <div className='container flex justify-center items-center md:justify-between text-white mx-auto px-10 py-8 mb-8'>
+      <div className='container flex justify-center items-center md:justify-between text-white mx-auto px-5 md:px-10 py-8 mb-8'>
         <Link href='/'>
           <h1 className='text-4xl text-center font-bold md:whitespace-nowrap cursor-pointer'>GraphCMS Blog</h1>
         </Link>
