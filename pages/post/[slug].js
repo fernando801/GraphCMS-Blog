@@ -54,7 +54,7 @@ export default function Post({ post, categories, relatedPosts }) {
                 />
               </div>
             </div>
-            <div className='flex flex-col gap-6 px-4 text-justify'>
+            <div className='flex flex-col gap-6 px-4 text-justify rich_text'>
               <RichText content={post.content.raw}/>
             </div>
           </div>
