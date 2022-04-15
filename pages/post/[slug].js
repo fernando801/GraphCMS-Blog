@@ -94,6 +94,6 @@ export async function getStaticPaths() {
   const paths = await getPostSlugs()
   return {
     paths,
-    fallback: true,
+    fallback: false,
   }
 }

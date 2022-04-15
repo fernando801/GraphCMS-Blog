@@ -58,6 +58,6 @@ export async function getStaticPaths() {
   const paths = await getCategorySlugs()
   return {
     paths,
-    fallback: true,
+    fallback: false,
   }
 }
