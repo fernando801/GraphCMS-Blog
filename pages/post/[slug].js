@@ -32,7 +32,7 @@ export default function Post({ post, categories, relatedPosts }) {
         <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
           <div className='col-span-1 lg:col-span-8 flex flex-col gap-8 '>
             <div className='flex flex-col gap-4'>
-              <h1 className='text-4xl sm:text-5xl font-bold text-center'>
+              <h1 className='text-4xl sm:text-5xl sm:py-4 font-bold text-center'>
                 {post.title}
               </h1>
               <div className='flex gap-2 justify-center flex-wrap'>
@@ -76,14 +76,14 @@ export default function Post({ post, categories, relatedPosts }) {
 }
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.slug)
-  const postCategories = postData.categories.map((category) => category.slug)
+  const post = await getPostData(params.slug)
+  const postCategories = post.categories.map((category) => category.slug)
   const relatedPosts = await getRelatedPosts(params.slug, postCategories)
   const categories = (await getCategories()) || []
 
   return {
     props: {
-      post: postData,
+      post,
       relatedPosts,
       categories,
     },
