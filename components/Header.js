@@ -1,14 +1,6 @@
 import Link from 'next/link'
 
-const categories = [
-  { name: 'React', slug: 'react' },
-  { name: 'Web Development', slug: 'webdev' },
-  { name: 'Photography', slug: 'photography' },
-  { name: 'Education', slug: 'education' },
-  { name: 'Sports', slug: 'sports' },
-]
-
-export default function Header({ props }) {
+export default function Header({ categories }) {
   return (
     <div className='bg-black'>
       <div className='container flex justify-center items-center md:justify-between md:gap-4 text-white mx-auto px-5 md:px-10 py-8 mb-8'>

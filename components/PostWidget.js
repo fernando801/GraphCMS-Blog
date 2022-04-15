@@ -7,20 +7,28 @@ export default function PostWidget({ recentPosts, relatedPosts }) {
         <>
           <h2 className='font-semibold p-2 text-lg'>Recent Posts</h2>
           {recentPosts?.length === 0 ? (
-            <p className='text-gray-600 font-light text-sm sm:text-base lg:text-sm px-2'>No Recent Posts</p>
+            <p className='text-gray-600 font-light text-sm sm:text-base lg:text-sm px-2'>
+              No Recent Posts
+            </p>
           ) : (
-            recentPosts.map((post) => <PostThumbnail key={post.slug} post={post}/>)
+            recentPosts.map((post) => (
+              <PostThumbnail key={post.slug} post={post} />
+            ))
           )}
         </>
       )}
 
       {relatedPosts && (
         <>
-          <h2 className='font-semibold p-2 text-lg'>Recent Posts</h2>
+          <h2 className='font-semibold p-2 text-lg'>Related Posts</h2>
           {relatedPosts?.length === 0 ? (
-            <p className='text-gray-600 font-light text-sm sm:text-base lg:text-sm px-2'>No Related Posts</p>
+            <p className='text-gray-600 font-light text-sm sm:text-base lg:text-sm px-2'>
+              No Related Posts
+            </p>
           ) : (
-            relatedPosts.map((post) => <PostThumbnail key={post.slug} post={post}/>)
+            relatedPosts.map((post) => (
+              <PostThumbnail key={post.slug} post={post} />
+            ))
           )}
         </>
       )}

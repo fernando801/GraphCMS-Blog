@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     fontFamily:{
-      'sans': ['Poppins', 'sans-serif', ...defaultTheme.fontFamily.sans],
+      'sans': ['Plus Jakarta Sans', 'sans-serif', ...defaultTheme.fontFamily.sans],
       'serif': ['serif', 'Georgia', ...defaultTheme.fontFamily.serif],
       'mono': ['monospace', 'SFMono-Regular', ...defaultTheme.fontFamily.mono],
     },

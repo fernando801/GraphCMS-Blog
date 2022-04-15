@@ -22,7 +22,7 @@ export default function PostCard({ post }) {
             {post.title}
           </h2>
         </Link>
-        <div className='flex gap-2 text-xs pb-2'>
+        <div className='flex flex-wrap gap-2 text-xs pb-2'>
           {post.categories.map((category) => (
             <Link key={category.slug} href={`/category/${category.slug}`}>
               <span className='p-1 rounded bg-gray-200 cursor-pointer'>
